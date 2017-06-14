@@ -9,7 +9,7 @@
               </div>
               <div class="col-md-3">
                 <div class="form-group">
-                  <button class="btn btn-primary btn-xs btn-block"><strong>Cari</strong></button>
+                  <a href="#" class="btn btn-primary btn-xs btn-block">Cari</a>
                 </div>
               </div>
             </div>
