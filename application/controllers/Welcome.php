@@ -20,6 +20,17 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('main');
+		$var['gcrud']=1;
+		$this->load->library('grocery_CRUD');    
+		$crud = new grocery_CRUD();
+		$crud->set_theme('bootstrap');
+		$crud->set_table('users');
+		$crud->unset_jquery();
+		$crud->unset_jquery_ui();
+		$crud->unset_bootstrap(); 
+		$output = $crud->render();
+		//print_r($output);
+		$var['output']=array("css_files"=>$output->css_files,"js_files"=>$output->js_files,"output"=>$output->output);
+		$this->load->view('main',$var);
 	}
 }
