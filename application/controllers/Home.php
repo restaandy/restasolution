@@ -21,7 +21,7 @@ class Home extends CI_Controller {
 		);
 		$var['module']="download";
 		$var['var_module']=array(
-			"title"=>"Download"
+			"list_kategori"=>$this->gmodel->get_kategori_download()
 		);
 		$this->load->view('main',$var);
 	}
