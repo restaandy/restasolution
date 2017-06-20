@@ -52,16 +52,19 @@ DROP TABLE IF EXISTS `download_kategori`;
 CREATE TABLE `download_kategori` (
   `id_kategori` int(11) NOT NULL AUTO_INCREMENT,
   `nama_kategori` varchar(50) NOT NULL,
-  PRIMARY KEY (`id_kategori`)
+  `icon` varchar(20) DEFAULT NULL,
+  `deskripsi` varchar(70) DEFAULT NULL,
+  PRIMARY KEY (`id_kategori`),
+  UNIQUE KEY `UNIQUE` (`nama_kategori`)
 ) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 /*Data for the table `download_kategori` */
 
-insert  into `download_kategori`(`id_kategori`,`nama_kategori`) values 
-(1,'Software'),
-(2,'Aplikasi / Program'),
-(3,'E-Book'),
-(4,'Template Website');
+insert  into `download_kategori`(`id_kategori`,`nama_kategori`,`icon`,`deskripsi`) values 
+(1,'software',NULL,NULL),
+(2,'aplikasi',NULL,NULL),
+(3,'e-book',NULL,NULL),
+(4,'template_website',NULL,NULL);
 
 /*Table structure for table `download_sub_kategori` */
 
